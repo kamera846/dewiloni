@@ -1,267 +1,94 @@
 @extends('layouts.main')
 
 @section('page-content')
-    <section class="page-title style-two" style="background-image: url({{ asset('assets/images/background/bg-11.jpg') }})">
-        <div class="auto-container">
-            <div class="content-box">
-                <div class="content-wrapper">
-                    <div class="title">
-                        <h1>Judul Postingan</h1>
-                        <ul class="post-meta">
-                            <li><i class="far fa-user"></i>City Admin</li>
-                            <li><i class="far fa-calendar"></i>Sep 3, 2020</li>
-                        </ul>
-                    </div>
-                    <ul class="bread-crumb">
-                        <li><a href="index.php">Beranda</a></li>
-                        <li><a href="blog-2.php">Blog</a></li>
-                        <li>Detail blog</li>
-                    </ul>
-                </div>
+<!-- Start end page title -->
+<section class="wow animate__fadeIn cover-background background-position-top top-space" style="background-image: url(<?= asset('storage/'.$blog->gambar_blog) ?>); visibility: visible; animation-name: fadeIn;">
+    <div class="opacity-medium bg-extra-dark-gray"></div>
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-12 d-flex justify-content-center flex-column text-center page-title-large padding-30px-tb">
+                <!-- start page title -->
+                <h1 class="text-white-2 alt-font font-weight-600 margin-10px-bottom">{{ $blog->judul }}</h1>
+                <!-- end page title -->
+                <!-- start sub title -->
+                <span class="text-white-2 opacity6 alt-font margin-10px-bottom d-block text-uppercase text-small">{{ $blog->created_at->isoFormat('dddd, d MMMM Y') }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by {{ ucwords($blog->penulis) }}&nbsp;&nbsp;&nbsp;</span>
+                <!-- end sub title -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- end page title -->
 
-    <!-- Sidebar Page Container -->
-    <section class="sidebar-page-container">
-        <div class="auto-container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="blog-single-post">
-                        <div class="top-content">
-                            <div class="image mb-5"><img src="{{ asset('assets/images/resource/news-23.jpg') }}" alt="" /></div>
-                            <h4>
-                                Eabore dolore magn aliqua enim veniam quis nostrud exercitas reprehenderit sint voluptate <br />
-                                cillum dolore fugiat nulla pariatur excepteur sint occaecat cupidats.
-                            </h4>
-                            <div class="text">
-                                <p>
-                                    Dolore magna aliquat minim veniay quis nos exercitation ullamco laboris aliquip ipsum dolor sit amet,consectetur adipisicing elit, sed eiusmod tempor incididunt labore magna aliqua. Ut enim quis
-                                    nostrud exercitation ullamco laboris aliquip lorem sed ipsum dolor sit.
-                                </p>
-                                <p>
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum doloreu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animid.
-                                </p>
-                            </div>
-                            <div class="row mb-30">
-                                <div class="col-md-6">
-                                    <div class="image mb-30"><img src="{{ asset('assets/images/resource/news-24.jpg') }}" alt="" /></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="image mb-30"><img src="{{ asset('assets/images/resource/news-25.jpg') }}" alt="" /></div>
-                                </div>
-                            </div>
-                            <h3>Start An Evening With Drinks At Rooftop Bars</h3>
-                            <div class="text">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium tom rem aperiam, eaque ipsa quae ab illo inventore veritatiset quasi architecto beatae vitae dicta sunt
-                                explic abo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut.
-                            </div>
-                            <blockquote style="background-image: url({{ asset('assets/images/resource/news-26.jpg') }})">
-                                <div class="quote"><span class="icon-quote"></span></div>
-                                <p>
-                                    Fugiat nula pariatur excepteur sint ocaecat cupidata proident euntin <br />
-                                    culp qui officia deserunt mollit anim esta laborum sed.
-                                </p>
-                                <cite>-- Governlia City Mayor</cite>
-                            </blockquote>
-                            <div class="text">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.
-                            </div>
-                            <h3>Recreation Of Watery Landscapes</h3>
-                            <div class="text">
-                                Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-                                tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                            </div>
+<!-- Start page section -->
+<section class="wow animate__fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="container position-relative"> 
+        <div class="row">
+            <div class="col-12 blog-content">
+                <div class="row justify-content-center">
+                    <main class="col-12 col-xl-9 col-lg-8 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom">
+                        <div class="col-12 blog-details-text last-paragraph-no-margin">
+                            <img src="{{ asset('storage/'.$blog->gambar_blog) }}" alt="" class="w-100 margin-45px-bottom" data-no-retina="" style="max-height: 62vh; object-fit: cover">
+                            <p>{!! $blog->konten !!}</p>
                         </div>
-                        <!-- <div class="author-box">
-                            <div class="image"><img src="assets/images/resource/author-6.jpg" alt="" /></div>
-                            <div class="content">
-                                <h4>Robert Christopher</h4>
-                                <h5>Writer, Blogger, Tourist (www.governlia.org)</h5>
-                                <div class="text">Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culp quis officia deserunt mollit anim id est laborum.</div>
-                                <ul class="social-links">
-                                    <li>
-                                        <a href="#"><span class="fab fa-twitter"></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="fab fa-facebook-f"></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="fab fa-linkedin-in"></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="fab fa-google-plus-g"></span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <aside class="sidebar blog-sidebar sidebar-style-two">
-                        <div class="widget widget_search">
-                            <h3 class="widget-title">Cari</h3>
-                            <form action="#" method="post" class="search-form">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" placeholder="Cari Postingan ..." required="" />
-                                    <button type="search"><i class="fas fa-search"></i></button>
-                                </div>
+                    </main>
+                    <aside class="col-12 col-xl-3 col-lg-4 col-md-7">
+                        <div class="d-inline-block w-100 margin-45px-bottom sm-margin-25px-bottom">
+                            <form action="/blog" class="position-relative">
+                                <div class="position-relative">
+                                    <input name="cari" id="text"  type="search" placeholder="Cari artikel..." class="bg-transparent padding-40px-right text-small mb-0 border-color-extra-light-gray medium-input float-start" value="{{ request('cari') }}">
+                                    <button type="submit" class="bg-transparent btn position-absolute right-0 top-1 search-button"><i class="fas fa-search ms-0"></i></button>
+                                </div>   
                             </form>
                         </div>
-                        <!-- <div class="widget widget_categories style-two">
-                            <h3 class="widget-title">Blog Categories</h3>
-                            <div class="widget-content">
-                                <ul class="categories-list">
-                                    <li><a href="blog-details.php">Business & Taxation</a></li>
-                                    <li><a href="blog-details.php">Law, Justice & Police</a></li>
-                                    <li class="current"><a href="blog-details.php"> Government & Elections</a></li>
-                                    <li><a href="blog-details.php">Pets & Wildlife Area</a></li>
-                                    <li><a href="blog-details.php">Employment & Jobs</a></li>
-                                </ul>
+                        {{-- <div class="bg-deep-pink padding-30px-all text-white-2 text-center margin-45px-bottom sm-margin-25px-bottom">
+                            <i class="fas fa-quote-left icon-small margin-15px-bottom d-block"></i>
+                            <span class="text-extra-large font-weight-300 margin-20px-bottom d-block">The future belongs to those who believe in the beauty of their dreams.</span>
+                        </div> --}}
+                        @if (request('cari'))
+                        @foreach($blogs as $blog)
+                        <div class="blog-post-content d-flex align-items-center flex-wrap margin-60px-bottom padding-60px-bottom border-bottom border-color-extra-light-gray md-margin-30px-bottom md-padding-30px-bottom text-center text-md-start md-no-border">
+                            <div class="col-12 col-lg-5 blog-image p-0 md-margin-30px-bottom sm-margin-20px-bottom margin-45px-right md-no-margin-right">
+                                <a href="/blog/{{ $blog->slug }}"><img src="{{ 'storage/' . $blog->gambar_blog }}" alt="" data-no-retina=""></a>
                             </div>
-                        </div> -->
-                        <!--Popular Posts-->
-                        <div class="widget widget_popular_post">
-                            <h3 class="widget-title">Postingan Terpopuler</h3>
-
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-19.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Recreation Programs <br />
-                                            From Landscapes</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
+                            <div class="col-12 col-lg-6 blog-text p-0">
+                                <div class="content margin-20px-bottom md-no-padding-left">
+                                    <a href="/blog/{{ $blog->slug }}" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 d-inline-block">{{ $blog->title }}</a>
+                                    <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font"><span>Oleh <a href="/blog/{{ $blog->slug }}" class="text-medium-gray">{{ ucwords($blog->penulis) }}</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>{{ $blog->created_at->isoFormat('d MMMM Y') }}</span>&nbsp;&nbsp;&nbsp;</div>
+                                    <p class="m-0 w-95 lg-w-100">{{ substr(strip_tags($blog->konten), 0, 285) }}...</p>
                                 </div>
-                            </article>
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-20.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Start An Evening With <br />
-                                            Drinks At Rooftop</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-21.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Self-Guided Driving & <br />
-                                            Tours Walk Of City</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-22.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Recreation Programs <br />
-                                            From Landscapes</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
+                                <a class="btn btn-very-small btn-dark-gray text-uppercase" href="/blog/{{ $blog->slug }}">Selengkapnya</a>
+                            </div>
                         </div>
-                        <div class="widget widget_popular_post">
-                            <h3 class="widget-title">Postingan Terbaru</h3>
-
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-19.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Recreation Programs <br />
-                                            From Landscapes</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-20.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Start An Evening With <br />
-                                            Drinks At Rooftop</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-21.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Self-Guided Driving & <br />
-                                            Tours Walk Of City</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
+                        @endforeach
+                        <div class="row justify-content-center">
+                            {{ $blogs->links() }}
                         </div>
-                        <!-- Tag-cloud Widget -->
-                        <!-- <div class="widget widget_tag_cloud">
-                            <h3 class="widget-title">Tags Cloud</h3>
-                            <ul class="clearfix">
-                                <li><a href="#">recreation</a></li>
-                                <li><a href="#">activities</a></li>
-                                <li><a href="#">administration</a></li>
-                                <li><a href="#">city</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">municipal</a></li>
-                                <li><a href="#">tourists</a></li>
-                                <li><a href="#">food & Drink</a></li>
+                        @else
+                            @if(request('cari'))
+                                <h4 class="text-center">Tidak ada hasil.</h3>
+                            @endif
+                        <div class="margin-45px-bottom sm-margin-25px-bottom">
+                            <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Artikel Lainnya</span></div>
+                            <ul class="latest-post position-relative">
+                                @foreach($recentPosts as $post)
+                                @if($post->slug === $post->judul)
+                                <li class="media d-flex">
+                                    <figure class="flex-shrink-0">
+                                        <a href="/blog/{{ $post->slug }}"><img src="{{ asset('storage/' . $post->gambar_blog) }}" alt="" data-no-retina=""></a>
+                                    </figure>
+                                    <div class="media-body flex-grow-1 text-small"><a href="blog-post-layout-01.html" class="text-extra-dark-gray"><span class="d-block margin-5px-bottom">{{ $post->judul }}</span></a> <span class="d-block text-medium-gray text-small">{{ $blog->created_at->isoFormat('d MMMM Y') }}</span></div>
+                                </li>
+                                @endif
+                                @endforeach
                             </ul>
-                        </div> -->
-                        <!-- Contact Widget two -->
-                        <!-- <div class="widget contact-widget-two" style="background-image: url(assets/images/resource/image-51.jpg)">
-                            <h3 class="widget-title">Municipal Complaints</h3>
-                            <div class="widget-content">
-                                <ul class="contact-info">
-                                    <li>
-                                        <a href="#"><i class="pe-7s-headphones"></i> Emergency 9922</a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:mail@governlia.net"><i class="pe-7s-mail-open"></i> mail@governlia.net</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:8526105599"><i class="pe-7s-call"></i> Call us 852-610-5599</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> -->
+                        </div>
+                        @endif
                     </aside>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- end page section -->
+
 @endsection

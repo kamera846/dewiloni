@@ -1,261 +1,122 @@
 @extends('layouts.main')
 
 @section('page-content')
-    <section class="page-title" style="background-image: url(assets/images/background/bg-9.jpg)">
-        <div class="auto-container">
-            <div class="content-box">
-                <div class="content-wrapper">
-                    <div class="title">
-                        <h1>Blog.</h1>
-                    </div>
-                    <ul class="bread-crumb">
-                        <li><a href="./">Beranda</a></li>
-                        <li>Postingan</li>
-                    </ul>
-                </div>
+
+
+<!-- Start end page title -->
+@foreach ($sections as $section)
+    <?php 
+    $image = json_decode($section->cover);
+    ?>
+    @if ($section->slug === 'blog' && $section->isActive === 'true' )
+<section class="wow animate__fadeIn parallax" data-parallax-background-ratio="0.5" style="background-image: url(<?= asset($image != null ? 'storage/'.$image[0] : 'https://via.placeholder.com/1920x450' )?>); visibility: visible; animation-name: fadeIn;">
+    <div class="opacity-medium bg-extra-dark-gray"></div>
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-12 d-flex flex-column justify-content-center text-center extra-small-screen page-title-large">
+                <!-- start page title -->
+                <h1 class="text-white-2 alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">{{ $section->title }}</h1>
+                <!-- end page title --> 
             </div>
         </div>
-    </section>
+    </div>
+</section>
+@endif
+@endforeach
+<!-- end page title -->
 
-    <!-- Sidebar Page Container -->
-    <section class="sidebar-page-container">
-        <div class="auto-container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="news-block-two">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="assets/images/resource/news-15.jpg" alt="" />
-                                <div class="overlay">
-                                    <div class="link-btn">
-                                        <a href="blog-details.php"><i class="icon-arrow"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.php">Assistance For Homes & Real Estate</a></h4>
-                                <div class="text">
-                                    Dolore magna aliquat minim veniay quis nos exercitation ullamco laboris aliquip ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore magna aliqua. Ut enim
-                                    quis nostrud exercitation ullamco laboris aliquip.
-                                </div>
-                                <ul class="post-meta">
-                                    <li><i class="far fa-user"></i>City Admin</li>
-                                    <li><i class="far fa-calendar"></i>Sep 3, 2020</li>
-                                    <li class="read-more">
-                                        <a href="blog-details.php"><i class="icon-arrow"></i>Read More</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+<!-- Start page section -->
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <main class="col-12 col-xl-9 col-lg-8 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom">
+                <!-- start post item -->
+                @if($jumlah_blog >= 1 )
+
+                @foreach($blogs as $blog)
+                <div class="blog-post-content d-flex align-items-center flex-wrap margin-60px-bottom padding-60px-bottom border-bottom border-color-extra-light-gray md-margin-30px-bottom md-padding-30px-bottom text-center text-md-start md-no-border">
+                    <div class="col-12 col-lg-5 blog-image p-0 md-margin-30px-bottom sm-margin-20px-bottom margin-45px-right md-no-margin-right">
+                        <a href="/blog/{{ $blog->slug }}"><img src="{{ 'storage/' . $blog->gambar_blog }}" alt="" data-no-retina=""></a>
                     </div>
-                    <div class="news-block-two">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="assets/images/resource/news-16.jpg" alt="" />
-                                <div class="overlay">
-                                    <div class="link-btn">
-                                        <a href="blog-details.php"><i class="icon-arrow"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.php">Highest Attraction Is Most Visited Market</a></h4>
-                                <div class="text">
-                                    Dolore magna aliquat minim veniay quis nos exercitation ullamco laboris aliquip ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore magna aliqua. Ut enim
-                                    quis nostrud exercitation ullamco laboris aliquip.
-                                </div>
-                                <ul class="post-meta">
-                                    <li><i class="far fa-user"></i>City Admin</li>
-                                    <li><i class="far fa-calendar"></i>Sep 3, 2020</li>
-                                    <li class="read-more">
-                                        <a href="blog-details.php"><i class="icon-arrow"></i>Read More</a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="col-12 col-lg-6 blog-text p-0">
+                        <div class="content margin-20px-bottom md-no-padding-left">
+                            <a href="/blog/{{ $blog->slug }}" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 d-inline-block">{{ $blog->title }}</a>
+                            <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font"><span>Oleh <a href="/blog/{{ $blog->slug }}" class="text-medium-gray">{{ ucwords($blog->penulis) }}</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>{{ $blog->created_at->isoFormat('d MMMM Y') }}</span>&nbsp;&nbsp;&nbsp;</div>
+                            <p class="m-0 w-95 lg-w-100">{{ substr(strip_tags($blog->konten), 0, 285) }}...</p>
                         </div>
+                        <a class="btn btn-very-small btn-dark-gray text-uppercase" href="/blog/{{ $blog->slug }}">Selengkapnya</a>
                     </div>
-                    <div class="news-block-two">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="assets/images/resource/news-17.jpg" alt="" />
-                                <div class="overlay">
-                                    <div class="link-btn">
-                                        <a href="blog-details.php"><i class="icon-arrow"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.php">Long Term Vision For Health Facilities</a></h4>
-                                <div class="text">
-                                    Dolore magna aliquat minim veniay quis nos exercitation ullamco laboris aliquip ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore magna aliqua. Ut enim
-                                    quis nostrud exercitation ullamco laboris aliquip.
-                                </div>
-                                <ul class="post-meta">
-                                    <li><i class="far fa-user"></i>City Admin</li>
-                                    <li><i class="far fa-calendar"></i>Sep 3, 2020</li>
-                                    <li class="read-more">
-                                        <a href="blog-details.php"><i class="icon-arrow"></i>Read More</a>
-                                    </li>
-                                </ul>
-                            </div>
+                </div>
+                @endforeach
+                <div class="row justify-content-center">
+                    {{ $blogs->links() }}
+                </div>
+                @else
+                        
+                    @if(request('cari'))
+                        <h4 class="text-center">Tidak ada hasil.</h3>
+                    @else
+                        <h4 class="text-center">Belum ada postingan.</h3>
+                    @endif
+
+                @endif
+                <!-- end pagination -->
+            </main>
+            <aside class="col-12 col-xl-3 col-lg-4 col-md-7">
+                <div class="d-inline-block w-100 margin-45px-bottom sm-margin-25px-bottom">
+                    <form action="/blog" class="position-relative">
+                        <div class="position-relative">
+                            <input name="cari" id="text"  type="search" placeholder="Cari artikel..." class="bg-transparent padding-40px-right text-small mb-0 border-color-extra-light-gray medium-input float-start" value="{{ request('cari') }}">
+                            <button type="submit" class="bg-transparent btn position-absolute right-0 top-1 search-button"><i class="fas fa-search ms-0"></i></button>
+                        </div>   
+                    </form>
+                </div>
+                {{-- <div class="bg-deep-pink padding-30px-all text-white-2 text-center margin-45px-bottom sm-margin-25px-bottom">
+                    <i class="fas fa-quote-left icon-small margin-15px-bottom d-block"></i>
+                    <span class="text-extra-large font-weight-300 margin-20px-bottom d-block">The future belongs to those who believe in the beauty of their dreams.</span>
+                </div> --}}
+                @if (request('cari'))
+                @foreach($blogs as $blog)
+                <div class="blog-post-content d-flex align-items-center flex-wrap margin-60px-bottom padding-60px-bottom border-bottom border-color-extra-light-gray md-margin-30px-bottom md-padding-30px-bottom text-center text-md-start md-no-border">
+                    <div class="col-12 col-lg-5 blog-image p-0 md-margin-30px-bottom sm-margin-20px-bottom margin-45px-right md-no-margin-right">
+                        <a href="/blog/{{ $blog->slug }}"><img src="{{ 'storage/' . $blog->gambar_blog }}" alt="" data-no-retina=""></a>
+                    </div>
+                    <div class="col-12 col-lg-6 blog-text p-0">
+                        <div class="content margin-20px-bottom md-no-padding-left">
+                            <a href="/blog/{{ $blog->slug }}" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 d-inline-block">{{ $blog->title }}</a>
+                            <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font"><span>Oleh <a href="/blog/{{ $blog->slug }}" class="text-medium-gray">{{ ucwords($blog->penulis) }}</a></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>{{ $blog->created_at->isoFormat('d MMMM Y') }}</span>&nbsp;&nbsp;&nbsp;</div>
+                            <p class="m-0 w-95 lg-w-100">{{ substr(strip_tags($blog->konten), 0, 285) }}...</p>
                         </div>
+                        <a class="btn btn-very-small btn-dark-gray text-uppercase" href="/blog/{{ $blog->slug }}">Selengkapnya</a>
                     </div>
-                    <div class="news-block-two">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="assets/images/resource/news-18.jpg" alt="" />
-                                <div class="overlay">
-                                    <div class="link-btn">
-                                        <a href="blog-details.php"><i class="icon-arrow"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="blog-details.php">Self-Guided Driving & Tours Of City</a></h4>
-                                <div class="text">
-                                    Dolore magna aliquat minim veniay quis nos exercitation ullamco laboris aliquip ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore magna aliqua. Ut enim
-                                    quis nostrud exercitation ullamco laboris aliquip.
-                                </div>
-                                <ul class="post-meta">
-                                    <li><i class="far fa-user"></i>City Admin</li>
-                                    <li><i class="far fa-calendar"></i>Sep 3, 2020</li>
-                                    <li class="read-more">
-                                        <a href="blog-details.php"><i class="icon-arrow"></i>Read More</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Post Pagination -->
-                    <ul class="post-pagination mt-5 mb-30">
-                        <li class="prev-page">
-                            <a href="#"><i class="icon-arrow"></i></a>
+                </div>
+                @endforeach
+                <div class="row justify-content-center">
+                    {{ $blogs->links() }}
+                </div>
+                @else
+                    @if(request('cari'))
+                        <h4 class="text-center">Tidak ada hasil.</h3>
+                    @endif
+                <div class="margin-45px-bottom sm-margin-25px-bottom">
+                    <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Artikel Terbaru</span></div>
+                    <ul class="latest-post position-relative">
+                        @foreach($recentPosts as $post)
+                        <li class="media d-flex">
+                            <figure class="flex-shrink-0">
+                                <a href="/blog/{{ $post->slug }}"><img src="{{ asset('storage/' . $post->gambar_blog) }}" alt="" data-no-retina=""></a>
+                            </figure>
+                            <div class="media-body flex-grow-1 text-small"><a href="blog-post-layout-01.html" class="text-extra-dark-gray"><span class="d-block margin-5px-bottom">{{ $post->judul }}</span></a> <span class="d-block text-medium-gray text-small">{{ $blog->created_at->isoFormat('d MMMM Y') }}</span></div>
                         </li>
-                        <li class="current"><span> 1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li class="next-page">
-                            <a href="#"><i class="icon-arrow"></i></a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <aside class="sidebar blog-sidebar sidebar-style-two">
-                        <div class="widget widget_search">
-                            <h3 class="widget-title">Cari</h3>
-                            <form action="#" method="post" class="search-form">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" placeholder="Cari Postingan ..." required="" />
-                                    <button type="search"><i class="fas fa-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- <div class="widget widget_categories style-two">
-                            <h3 class="widget-title">Blog Categories</h3>
-                            <div class="widget-content">
-                                <ul class="categories-list">
-                                    <li><a href="blog-details.php">Business & Taxation</a></li>
-                                    <li><a href="blog-details.php">Law, Justice & Police</a></li>
-                                    <li class="current"><a href="blog-details.php"> Government & Elections</a></li>
-                                    <li><a href="blog-details.php">Pets & Wildlife Area</a></li>
-                                    <li><a href="blog-details.php">Employment & Jobs</a></li>
-                                </ul>
-                            </div>
-                        </div> -->
-                        <div class="widget widget_popular_post">
-                            <h3 class="widget-title">Postingan Terbaru</h3>
-
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-19.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Recreation Programs <br />
-                                            From Landscapes</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-20.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Start An Evening With <br />
-                                            Drinks At Rooftop</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-21.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Self-Guided Driving & <br />
-                                            Tours Walk Of City</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
-                            <article class="post">
-                                <figure class="post-thumb">
-                                    <a href="blog-details.php"><img src="assets/images/resource/news-22.jpg" alt="" /></a>
-                                </figure>
-                                <div class="content">
-                                    <h5>
-                                        <a href="blog-details.php"
-                                            >Recreation Programs <br />
-                                            From Landscapes</a
-                                        >
-                                    </h5>
-                                    <div class="post-info"><i class="far fa-calendar-alt"></i> Sep 3, 2020</div>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- Tag-cloud Widget -->
-                        <!-- <div class="widget widget_tag_cloud">
-                            <h3 class="widget-title">Tags Cloud</h3>
-                            <ul class="clearfix">
-                                <li><a href="#">recreation</a></li>
-                                <li><a href="#">activities</a></li>
-                                <li><a href="#">administration</a></li>
-                                <li><a href="#">city</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">municipal</a></li>
-                                <li><a href="#">tourists</a></li>
-                                <li><a href="#">food & Drink</a></li>
-                            </ul>
-                        </div> -->
-                        <!-- Contact Widget two -->
-                        <!-- <div class="widget contact-widget-two" style="background-image: url(assets/images/resource/image-51.jpg)">
-                            <h3 class="widget-title">Municipal Complaints</h3>
-                            <div class="widget-content">
-                                <ul class="contact-info">
-                                    <li>
-                                        <a href="#"><i class="pe-7s-headphones"></i> Emergency 9922</a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:mail@governlia.net"><i class="pe-7s-mail-open"></i> mail@governlia.net</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:8526105599"><i class="pe-7s-call"></i> Call us 852-610-5599</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> -->
-                    </aside>
-                </div>
-            </div>
+                @endif
+            </aside>
         </div>
-    </section>
+    </div>
+</section>
+<!-- end page section -->
+
+
 @endsection
