@@ -1,545 +1,233 @@
 @extends('layouts.main')
 
 @section('page-content')
-    <section class="page-title" style="background-image: url(assets/images/background/bg-9.jpg)">
-        <div class="auto-container">
-            <div class="content-box">
-                <div class="content-wrapper">
-                    <div class="title">
-                        <h1>Tentang Kami.</h1>
-                    </div>
-                    <ul class="bread-crumb">
-                        <li><a href="./">Beranda</a></li>
-                        <li>Tentang Kami</li>
+    
+<!-- start page title section -->
+<section class="wow animate__fadeIn bg-light-gray padding-35px-tb page-title-small top-space">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 col-md-6 text-md-start text-center">
+                <!-- start page title -->
+                <h1 class="alt-font text-extra-dark-gray font-weight-600 mb-0 text-uppercase">Tentang Kami</h1>
+                <!-- end page title -->
+            </div>
+            <div class="col-lg-4 col-md-6 breadcrumb text-small alt-font justify-content-center justify-content-md-end sm-margin-15px-top">
+                <!-- breadcrumb -->
+                <ul>
+                    <li><a href="/" class="text-dark-gray">Beranda</a></li>
+                    <li class="text-dark-gray">Tentang</li>
+                </ul>
+                <!-- end breadcrumb -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end page title section -->
+{{-- "Cerita Mitos Danau Rana Mese:
+Seorang Pemburu bernama Empo Mese yang setelah berburu pagi siang dan malam,Tidak mendapatkan satu ekor pun Binatang. Dia naik ke atas pohon di tengah lembah dan ketika melihat kebawah melihat seperti ada gemerlap cincin Emas,namun ketika turun Cincin Emas itu hilang. Dia tetap berulangkali melakukanya tetap sama.Kemudian ketika Cincin itu terlihat lagi,Dia melempar Korung (Tombak) ke tengah Cincin dan turun lagi.Ketika tombaknya dicabut,bukan Cincin yang tertarik tapi AIR, makin lama makin besar hingga 
+menenggelamkannya.Kepala Empo Mese menjadi batu yang diangkat Bidadari dari dalam dasar danau ke 
+daratan. Ada dua danau yang di huni mahluk halus yaitu Danau Rana Mese (Danau Kecil) dan danau Rana Hembok (Danau Besar) yang terletak di Golo Rutuk . Penghuni danau Rana Mese dan Rana Hembok Berperang.Penghuni Rana Mese pun minta bantuan manusia karena nyaris kalah. Dan Pasukan manusia danau rana mese pun menang dalam pertempuran Perang dengan mudah karena senjata yang digunakan Rana Hembok adalah 
+BELUT (yang dalam Pandangan Mahluk halus adalah Tombak). Manusia menebas belut itu dengan Parang Maka Kekalahan Penghuni rana Hembok Dibayar dengan menukar danau Rana Mese menjadi lebih luas." --}}
+<!-- start story section -->
+<section class="wow animate__fadeIn">
+    <div class="container"> 
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-5 col-md-6  mb-5 text-center md-margin-30px-bottom wow animate__fadeInLeft">
+                <img src="https://via.placeholder.com/900x650" alt="" class="border-radius-6 w-100">
+            </div> 
+            <div class="col-12 col-lg-7 col-md-6 text-center text-md-start padding-eight-lr lg-padding-six-lr md-padding-15px-lr wow animate__fadeInRight" data-wow-delay="0.2s">
+                <h6 class="alt-font text-extra-dark-gray">Cerita Mitos Danau Rana Mese</h6>
+                <p>
+                    Seorang Pemburu bernama Empo Mese yang setelah berburu pagi siang dan malam,Tidak mendapatkan satu ekor pun Binatang. Dia naik ke atas pohon di tengah lembah dan ketika melihat kebawah melihat seperti ada gemerlap cincin Emas,namun ketika turun Cincin Emas itu hilang. Dia tetap berulangkali melakukanya tetap sama.Kemudian ketika Cincin itu terlihat lagi,Dia melempar Korung (Tombak) ke tengah Cincin dan turun lagi.Ketika tombaknya dicabut,bukan Cincin yang tertarik tapi AIR, makin lama makin besar hingga 
+                    menenggelamkannya.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center ">
+            <div class="col-12">
+                <p>
+                    Ada dua danau yang di huni mahluk halus yaitu Danau Rana Mese (Danau Kecil) dan danau Rana Hembok (Danau Besar) yang terletak di Golo Rutuk . Penghuni danau Rana Mese dan Rana Hembok Berperang.Penghuni Rana Mese pun minta bantuan manusia karena nyaris kalah. Dan Pasukan manusia danau rana mese pun menang dalam pertempuran Perang dengan mudah karena senjata yang digunakan Rana Hembok adalah 
+                    BELUT (yang dalam Pandangan Mahluk halus adalah Tombak). Manusia menebas belut itu dengan Parang Maka Kekalahan Penghuni rana Hembok Dibayar dengan menukar danau Rana Mese menjadi lebih luas.
+                </p>
+                <p>
+                    Desa Golo Loni punya kegiatan adat Pementasan Tarian Adat Manggarai.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end story section -->
+<!-- start feature box -->
+<section class="p-0 wow animate__fadeIn">
+    <div class="container-fluid">
+        <div class="row justify-content-center row-cols-1 row-cols-lg-4 row-cols-sm-2">
+            <!-- start features box item -->
+            <div class="col d-flex align-items-center border-left border-top border-right border-bottom border-color-extra-light-gray xs-no-border-right wow animate__fadeInUp last-paragraph-no-margin">
+                <div class="padding-fifteen-all sm-padding-five-lr sm-padding-ten-tb">
+                    <span class="d-block alt-font font-weight-600 ms-3 text-extra-dark-gray margin-25px-top margin-10px-bottom">Spot wisata</span>
+                    <ul>
+                        <li>Danau Rana Mese</li>
+                        <li>River Tubing Sungai Wae Dingin</li>
+                        <li>Bird Watching</li>
+                        <li>Agrowisata Golo Loni</li>
+                        <li>Spot Foto Bukit Kunang-kunang</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col d-flex align-items-center border-top border-right border-bottom border-color-extra-light-gray md-no-border-right wow animate__fadeInUp last-paragraph-no-margin" data-wow-delay="0.2s">
+                <div class="padding-fifteen-all sm-padding-five-lr sm-padding-ten-tb">
+                    <span class="d-block alt-font font-weight-600 ms-3 text-extra-dark-gray margin-25px-top margin-10px-bottom">Makanan Khas & Hasil Bumi</span>
+                    <ul>
+                        <li>Kripik Pegagan</li>
+                        <li>Sayuran</li>
+                        <li>Ikan Air Tawar</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end features box item -->
+            <!-- start features box item -->
+            <div class="col d-flex align-items-center border-top border-right border-bottom border-color-extra-light-gray xs-no-border-right wow animate__fadeInUp last-paragraph-no-margin" data-wow-delay="0.4s">
+                <div class="padding-fifteen-all sm-padding-five-lr sm-padding-ten-tb">
+                    <span class="d-block alt-font font-weight-600 ms-3 text-extra-dark-gray margin-25px-top margin-10px-bottom">Fasilitas & Layanan</span>
+                    <ul>
+                        <li>Areal parkir</li>
+                        <li>Homestay / Rumah Tinggal</li>
+                        <li>Warung / Kuliner</li>
+                        <li>Spot Foto</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- About section -->
-    <section class="about-section style-two">
-        <div class="auto-container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="sec-title mb-30">
-                        <h2>
-                            Clean Infrastructures <br />
-                            & Flawless Attractions
-                        </h2>
-                    </div>
-                    <div class="content-block">
-                        <h3>Voice Of The People: <strong> Governlia</strong></h3>
-                        <div class="text">
-                            Veniam quis nostrud exercitation llamco laboris nis aliquip conseqa rure dolorn repreh derit luptate velit excepteur ocaecats aliquip ex duis aute irure dolor in reprehenderit voluptate velitey cillum
-                            dolore ipsum dolor consectetur.
-                        </div>
-                        <ul class="list">
-                            <li>Improving all types of opportunities</li>
-                            <li>Quick solutions for daily problems</li>
-                            <li>Best time and place to start business</li>
-                            <li>Community that grows larger</li>
-                        </ul>
-                        <div class="bottom-content">
-                            <div class="text">
-                                For Any Help, Questions <br />
-                                or Suggestions, Contact Us
-                            </div>
-                            <ul class="contact-link">
-                                <li>
-                                    <a href="tel:+1(345)20678"><i class="icon-phone"></i></a>
-                                </li>
-                                <li>
-                                    <a href="mailto:munciple@example.net"><i class="icon-envelope"></i></a>
-                                </li>
-                                <li>
-                                    <a href="contact.php"><i class="icon-placeholder"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="image-block">
-                        <div class="row">
-                            <div class="col-lg-6 column">
-                                <div class="image"><img src="assets/images/resource/image-28.jpg" alt="" /></div>
-                                <div class="image"><img src="assets/images/resource/image-29.jpg" alt="" /></div>
-                            </div>
-                            <div class="col-lg-6 column">
-                                <div class="image"><img src="assets/images/resource/image-30.jpg" alt="" /></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </div>
+</section>
+<!-- end feature box -->
+<!-- start event image section -->
+<section class="wow animate__fadeIn">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-7 col-lg-8 col-md-10 margin-seven-bottom md-margin-30px-bottom sm-margin-20px-bottom text-center">
+                <h5 class="alt-font text-extra-dark-gray font-weight-600 mb-0">Foto Adat Desa</h5>
             </div>
         </div>
-    </section>
-
-    <!-- Funfacts Section -->
-    <section class="funfacts-section mb-0" style="background-image: url(assets/images/background/bg-1.jpg)">
-        <div class="auto-container">
-            <div class="row">
-                <!--Column-->
-                <div class="column counter-column col-lg-4 col-md-6">
-                    <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="icon-outer">
-                            <div class="icon"><span class="icon-area"></span></div>
-                        </div>
-                        <div class="content">
-                            <div class="text">Area Covered</div>
-                            <div class="count-outer count-box"><span class="count-text" data-speed="3000" data-stop="790.3">0</span><span>km²</span></div>
-                        </div>
-                    </div>
-                </div>
-                <!--Column-->
-                <div class="column counter-column col-lg-4 col-md-6">
-                    <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="icon-outer">
-                            <div class="icon"><span class="icon-people"></span></div>
-                        </div>
-                        <div class="content">
-                            <div class="text">Peoples Lived</div>
-                            <div class="count-outer count-box"><span class="count-text" data-speed="3000" data-stop="5.39">0</span><span>million</span></div>
-                        </div>
-                    </div>
-                </div>
-                <!--Column-->
-                <div class="column counter-column col-lg-4 col-md-6">
-                    <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="icon-outer">
-                            <div class="icon"><span class="icon-language"></span></div>
-                        </div>
-                        <div class="content">
-                            <div class="text">Languages Spoken</div>
-                            <div class="count-outer count-box"><span>Over</span><span class="count-text" data-speed="3000" data-stop="460">0</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section mb-30">
-        <div class="auto-container">
-            <div class="row no-gutters">
-                <div class="col-xl-3 col-lg-6 feature-block">
-                    <div class="inner-box">
-                        <div class="icon"><span class="icon-train"></span></div>
-                        <div class="content">
-                            <div class="category"><span>Transportation</span></div>
-                            <h3>
-                                Find a Public Transport <br />
-                                or Locate Parking
-                            </h3>
-                        </div>
-                        <div class="overlay" style="background-image: url(assets/images/resource/image-16.jpg)">
-                            <div class="category"><span>Transportation</span></div>
-                            <h3>
-                                Find a Public Transport <br />
-                                or Locate Parking
-                            </h3>
-                            <div class="text">
-                                Dolore magna aliquat minim veniay quis <br />
-                                exercit ullamco laboris aliquip...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 feature-block">
-                    <div class="inner-box">
-                        <div class="icon"><span class="icon-pets-2"></span></div>
-                        <div class="content">
-                            <div class="category"><span>Wildlife Animals</span></div>
-                            <h3>
-                                Search for an Animal or <br />
-                                Pet for Adoption
-                            </h3>
-                        </div>
-                        <div class="overlay" style="background-image: url(assets/images/resource/image-16.jpg)">
-                            <div class="category"><span>Wildlife Animals</span></div>
-                            <h3>
-                                Search for an Animal or <br />
-                                Pet for Adoption
-                            </h3>
-                            <div class="text">
-                                Dolore magna aliquat minim veniay quis <br />
-                                exercit ullamco laboris aliquip...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 feature-block">
-                    <div class="inner-box">
-                        <div class="icon"><span class="icon-laptop"></span></div>
-                        <div class="content">
-                            <div class="category"><span>Utility Services</span></div>
-                            <h3>
-                                Pay any Utility Bill Easily <br />
-                                by Access Account
-                            </h3>
-                        </div>
-                        <div class="overlay" style="background-image: url(assets/images/resource/image-16.jpg)">
-                            <div class="category"><span>Utility Services</span></div>
-                            <h3>
-                                Pay any Utility Bill Easily <br />
-                                by Access Account
-                            </h3>
-                            <div class="text">
-                                Dolore magna aliquat minim veniay quis <br />
-                                exercit ullamco laboris aliquip...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 feature-block">
-                    <div class="inner-box">
-                        <div class="icon"><span class="icon-report"></span></div>
-                        <div class="content">
-                            <div class="category"><span>Municipal Court</span></div>
-                            <h3>
-                                Did any Violation? Submit <br />
-                                Ticket(s) or Pay Tax
-                            </h3>
-                        </div>
-                        <div class="overlay" style="background-image: url(assets/images/resource/image-16.jpg)">
-                            <div class="category"><span>Transportation</span></div>
-                            <h3>
-                                Find a Public Transport <br />
-                                or Locate Parking
-                            </h3>
-                            <div class="text">
-                                Dolore magna aliquat minim veniay quis <br />
-                                exercit ullamco laboris aliquip...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mayor Message section -->
-    <section class="mayor-message-section">
-        <div class="auto-container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="image"><img src="assets/images/resource/image-4.jpg" alt="" /></div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="content-block pl-lg-5">
-                        <div class="sec-title">
-                            <div class="sub-title">City With Equity - Efficiency - Opportunity</div>
-                            <h2>Message From City Mayor</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <h3><span>Meet</span> Tim Brexton</h3>
-                                <h4>Elected since August 25, 2017</h4>
-                                <div class="text">
-                                    <p>
-                                        Hiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur.
-                                    </p>
-                                    <p>Excepteur sint occaecat cupidatat non proident suntin culpa qui officia deserunt mollit anim idm est laborum. Sed perspiciatis und omnis iste natus error sit voluptatem accusantium.</p>
-                                </div>
-                                <div class="sign"><img src="assets/images/resource/sign.png" alt="" /></div>
-                                <div class="designation">The City Mayor</div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="funfacts">
-                                    <div class="column counter-column">
-                                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                            <div class="content">
-                                                <div class="text">Years Of <br />Experience</div>
-                                                <div class="count-outer count-box">
-                                                    <span class="count-text" data-speed="3000" data-stop="25">0</span>
-                                                </div>
+        <div class="row">
+            <div class="col-12 filter-content overflow-hidden">
+                <ul class="hover-option2 zoom-gallery portfolio-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-small" style="position: relative; height: 513.25px;">
+                    <li class="grid-sizer"></li>
+                    <!-- start image gallery item -->
+                    <li class="grid-item wow animate__fadeInUp" style="position: absolute; left: 0%; top: 0px; animation: 0s ease 0s 1 normal none running none;">
+                        <a href="https://via.placeholder.com/750x500" data-group="zoom-gallery">
+                            <figure>
+                                <div class="portfolio-img bg-extra-dark-gray"><img src="https://via.placeholder.com/750x500" alt="" class="project-img-gallery" data-no-retina=""></div>
+                                <figcaption>
+                                    <div class="portfolio-hover-main text-center">
+                                        <div class="portfolio-hover-box align-middle">
+                                            <div class="portfolio-hover-content position-relative">
+                                                <i class="ti-zoom-in text-white-2 fa-2x"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column counter-column">
-                                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                            <div class="content">
-                                                <div class="text">
-                                                    programs <br />
-                                                    for the city
-                                                </div>
-                                                <div class="count-outer count-box">
-                                                    <span class="count-text" data-speed="3000" data-stop="80">0</span>
-                                                </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- end image gallery item -->
+                    <!-- start image gallery item -->
+                    <li class="grid-item wow animate__fadeInUp" data-wow-delay="0.2s" style="position: absolute; left: 33.3292%; top: 0px; animation: 0s ease 0s 1 normal none running none;">
+                        <a href="https://via.placeholder.com/750x500" data-group="zoom-gallery">
+                            <figure>
+                                <div class="portfolio-img bg-extra-dark-gray"><img src="https://via.placeholder.com/750x500" alt="" class="project-img-gallery" data-no-retina=""></div>
+                                <figcaption>
+                                    <div class="portfolio-hover-main text-center">
+                                        <div class="portfolio-hover-box align-middle">
+                                            <div class="portfolio-hover-content position-relative">
+                                                <i class="ti-zoom-in text-white-2 fa-2x"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column counter-column">
-                                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                            <div class="content">
-                                                <div class="text">
-                                                    Approved <br />
-                                                    covid-19 centers
-                                                </div>
-                                                <div class="count-outer count-box">
-                                                    <span class="count-text" data-speed="3000" data-stop="63">0</span>
-                                                </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- end image gallery item -->
+                    <!-- start image gallery item -->
+                    <li class="grid-item wow animate__fadeInUp" data-wow-delay="0.4s" style="position: absolute; left: 66.6584%; top: 0px; animation: 0s ease 0s 1 normal none running none;">
+                        <a href="https://via.placeholder.com/750x500" data-group="zoom-gallery">
+                            <figure>
+                                <div class="portfolio-img bg-extra-dark-gray"><img src="https://via.placeholder.com/750x500" alt="" class="project-img-gallery" data-no-retina=""></div>
+                                <figcaption>
+                                    <div class="portfolio-hover-main text-center">
+                                        <div class="portfolio-hover-box align-middle">
+                                            <div class="portfolio-hover-content position-relative">
+                                                <i class="ti-zoom-in text-white-2 fa-2x"></i>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- end image gallery item -->
+                    <!-- start image gallery item -->
+                    <li class="grid-item wow animate__fadeInUp" data-wow-delay="0.6s" style="position: absolute; left: 0%; top: 256.625px; animation: 0s ease 0s 1 normal none running none;">
+                        <a href="https://via.placeholder.com/750x500" data-group="zoom-gallery">
+                            <figure>
+                                <div class="portfolio-img bg-extra-dark-gray"><img src="https://via.placeholder.com/750x500" alt="" class="project-img-gallery" data-no-retina=""></div>
+                                <figcaption>
+                                    <div class="portfolio-hover-main text-center">
+                                        <div class="portfolio-hover-box align-middle">
+                                            <div class="portfolio-hover-content position-relative">
+                                                <i class="ti-zoom-in text-white-2 fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- end image gallery item -->
+                    <!-- start image gallery item -->
+                    <li class="grid-item wow animate__fadeInUp" data-wow-delay="0.8s" style="position: absolute; left: 33.3292%; top: 256.625px; animation: 0s ease 0s 1 normal none running none;">
+                        <a href="https://via.placeholder.com/750x500" data-group="zoom-gallery">
+                            <figure>
+                                <div class="portfolio-img bg-extra-dark-gray"><img src="https://via.placeholder.com/750x500" alt="" class="project-img-gallery" data-no-retina=""></div>
+                                <figcaption>
+                                    <div class="portfolio-hover-main text-center">
+                                        <div class="portfolio-hover-box align-middle">
+                                            <div class="portfolio-hover-content position-relative">
+                                                <i class="ti-zoom-in text-white-2 fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- end image gallery item -->
+                    <!-- start image gallery item -->
+                    <li class="grid-item wow animate__fadeInUp" data-wow-delay="1s" style="position: absolute; left: 66.6584%; top: 256.625px; animation: 0s ease 0s 1 normal none running none;">
+                        <a href="https://via.placeholder.com/750x500" data-group="zoom-gallery">
+                            <figure>
+                                <div class="portfolio-img bg-extra-dark-gray"><img src="https://via.placeholder.com/750x500" alt="" class="project-img-gallery" data-no-retina=""></div>
+                                <figcaption>
+                                    <div class="portfolio-hover-main text-center">
+                                        <div class="portfolio-hover-box align-middle">
+                                            <div class="portfolio-hover-content position-relative">
+                                                <i class="ti-zoom-in text-white-2 fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <!-- end image gallery item -->
+                </ul>
             </div>
-        </div>
-    </section>
+        </div>                
+    </div>
+</section>
+<!-- end event image section -->
 
-    <!-- Video section -->
-    <section class="video-section" style="background-image: url(assets/images/background/bg-3.jpg)">
-        <div class="auto-container">
-            <h2>
-                <strong>Experience The Great</strong> <br />
-                Countryside And Enjoy Hiking
-            </h2>
-            <div class="text">Eabore ipsum dolor sit amet consectetur adipisicing tempor</div>
-            <div class="video-btn">
-                <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="overlay-link play-now ripple" data-fancybox="gallery" data-caption=""><span class="fas fa-play"></span> </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team section -->
-    <section class="team-section">
-        <div class="auto-container">
-            <div class="sec-title style-two text-center">
-                <div class="big-title">Governlia</div>
-                <div class="sub-title">City With Equity - Efficiency - Opportunity</div>
-                <h2>Upcoming City Events</h2>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-md-6 team-block">
-                    <div class="inner-box">
-                        <div class="image"><img src="assets/images/resource/team-1.jpg" alt="" /></div>
-                        <div class="content">
-                            <h4>Paul Wilson</h4>
-                            <div class="designation">mayor / Chairman</div>
-                        </div>
-                        <div class="overlay">
-                            <div class="content-two">
-                                <h4>Paul Wilson</h4>
-                                <div class="designation">mayor / Chairman</div>
-                                <ul class="contact-info">
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-phone"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-envelope-open"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                </ul>
-                                <ul class="social-links">
-                                    <li>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-linked-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 team-block">
-                    <div class="inner-box">
-                        <div class="image"><img src="assets/images/resource/team-2.jpg" alt="" /></div>
-                        <div class="content">
-                            <h4>Robert Gates</h4>
-                            <div class="designation">Ambassador</div>
-                        </div>
-                        <div class="overlay">
-                            <div class="content-two">
-                                <h4>Robert Gates</h4>
-                                <div class="designation">Ambassador</div>
-                                <ul class="contact-info">
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-phone"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-envelope-open"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                </ul>
-                                <ul class="social-links">
-                                    <li>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-linked-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 team-block">
-                    <div class="inner-box">
-                        <div class="image"><img src="assets/images/resource/team-3.jpg" alt="" /></div>
-                        <div class="content">
-                            <h4>Amanda Tim</h4>
-                            <div class="designation">Mayor Assistant</div>
-                        </div>
-                        <div class="overlay">
-                            <div class="content-two">
-                                <h4>Amanda Tim</h4>
-                                <div class="designation">Mayor Assistant</div>
-                                <ul class="contact-info">
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-phone"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-envelope-open"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                </ul>
-                                <ul class="social-links">
-                                    <li>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-linked-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 team-block">
-                    <div class="inner-box">
-                        <div class="image"><img src="assets/images/resource/team-4.jpg" alt="" /></div>
-                        <div class="content">
-                            <h4>Richard Auston</h4>
-                            <div class="designation">Council Member</div>
-                        </div>
-                        <div class="overlay">
-                            <div class="content-two">
-                                <h4>Paul Wilson</h4>
-                                <div class="designation">Council Member</div>
-                                <ul class="contact-info">
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-phone"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-envelope-open"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                </ul>
-                                <ul class="social-links">
-                                    <li>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-linked-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 team-block">
-                    <div class="inner-box">
-                        <div class="image"><img src="assets/images/resource/team-5.jpg" alt="" /></div>
-                        <div class="content">
-                            <h4>Harry Arther</h4>
-                            <div class="designation">Council Member</div>
-                        </div>
-                        <div class="overlay">
-                            <div class="content-two">
-                                <h4>Harry Arther</h4>
-                                <div class="designation">Council Member</div>
-                                <ul class="contact-info">
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-phone"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-envelope-open"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                </ul>
-                                <ul class="social-links">
-                                    <li>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-linked-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 team-block">
-                    <div class="inner-box">
-                        <div class="image"><img src="assets/images/resource/team-1.jpg" alt="" /></div>
-                        <div class="content">
-                            <h4>Jack W. Oliver</h4>
-                            <div class="designation">Council Member</div>
-                        </div>
-                        <div class="overlay">
-                            <div class="content-two">
-                                <h4>Jack W. Oliver</h4>
-                                <div class="designation">Council Member</div>
-                                <ul class="contact-info">
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-phone"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+1(852)6105599"><i class="fas fa-envelope-open"></i>+ 1 (852) 610 5599</a>
-                                    </li>
-                                </ul>
-                                <ul class="social-links">
-                                    <li>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fab fa-linked-in"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection
