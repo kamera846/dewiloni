@@ -42,7 +42,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1">
-                            <ul class="nav navbar-nav navbar-left no-margin alt-font text-normal"">
+                            <ul class="nav navbar-nav navbar-left no-margin alt-font text-normal">
                                 <!-- start menu item -->
                                 <li class="">
                                     <a href="/" class="nav-link">Beranda</a>
