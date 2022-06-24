@@ -40,10 +40,6 @@
                                 </div>   
                             </form>
                         </div>
-                        {{-- <div class="bg-deep-pink padding-30px-all text-white-2 text-center margin-45px-bottom sm-margin-25px-bottom">
-                            <i class="fas fa-quote-left icon-small margin-15px-bottom d-block"></i>
-                            <span class="text-extra-large font-weight-300 margin-20px-bottom d-block">The future belongs to those who believe in the beauty of their dreams.</span>
-                        </div> --}}
                         @if (request('cari'))
                         @foreach($blogs as $blog)
                         <div class="blog-post-content d-flex align-items-center flex-wrap margin-60px-bottom padding-60px-bottom border-bottom border-color-extra-light-gray md-margin-30px-bottom md-padding-30px-bottom text-center text-md-start md-no-border">
@@ -71,14 +67,12 @@
                             <div class="text-extra-dark-gray margin-25px-bottom alt-font text-uppercase font-weight-600 text-small aside-title"><span>Artikel Lainnya</span></div>
                             <ul class="latest-post position-relative">
                                 @foreach($recentPosts as $post)
-                                @if($post->slug === $post->judul)
                                 <li class="media d-flex">
                                     <figure class="flex-shrink-0">
                                         <a href="/blog/{{ $post->slug }}"><img src="{{ asset('storage/' . $post->gambar_blog) }}" alt="" data-no-retina=""></a>
                                     </figure>
-                                    <div class="media-body flex-grow-1 text-small"><a href="blog-post-layout-01.html" class="text-extra-dark-gray"><span class="d-block margin-5px-bottom">{{ $post->judul }}</span></a> <span class="d-block text-medium-gray text-small">{{ $blog->created_at->isoFormat('d MMMM Y') }}</span></div>
+                                    <div class="media-body flex-grow-1 text-small"><a href="/blog/{{ $post->slug }}" class="text-extra-dark-gray"><span class="d-block margin-5px-bottom">{{ $post->judul }}</span></a> <span class="d-block text-medium-gray text-small">{{ $blog->created_at->isoFormat('d MMMM Y') }}</span></div>
                                 </li>
-                                @endif
                                 @endforeach
                             </ul>
                         </div>

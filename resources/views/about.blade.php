@@ -105,6 +105,13 @@
                     {{-- Makanan khas, Souvenir, <br> & Hasil Bumi --}}
                 </div>
                 <p class="w-90 lg-w-100">
+                    {{-- <ul>
+                        <li>Nasi Kaget Colol</li>
+                        <li>Gelang Kopi Colol</li>
+                        <li>Kopi Kemasan</li>
+                        <li>Kopi</li>
+                        <li>Ikan Air Tawar</li>
+                    </ul> --}}
                     {!! $section->description !!}
                 </p>
                 <div class="separator-line-horrizontal-medium-light3 bg-deep-pink margin-5px-top float-start"></div>

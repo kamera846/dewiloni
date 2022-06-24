@@ -17,7 +17,7 @@
                         <div class="row h-100">
                             <div class="col-12 d-flex justify-content-center flex-column text-center text-md-start">
                                 <h1 class="alt-font text-extra-dark-gray font-weight-700 letter-spacing-minus-1 line-height-80 w-55 margin-35px-bottom lg-w-60 md-w-70 lg-line-height-auto sm-w-100 sm-margin-15px-bottom">{{ $section->title }}</h1>
-                                <p class="text-extra-dark-gray text-large margin-four-bottom w-40 lg-w-50 md-w-60 sm-w-100 sm-margin-15px-bottom">{{$section->description}}</p>
+                                <p class="text-extra-dark-gray text-large margin-four-bottom w-40 lg-w-50 md-w-60 sm-w-100 sm-margin-15px-bottom">{!! $section->description !!}</p>
                                 {{-- <div class="btn-dual"><a href="https://1.envato.market/g7jrr" target="_blank" class="btn btn-dark-gray btn-rounded btn-small no-margin-lr">Purchase Pofo</a><a href="https://1.envato.market/g7jrr" target="_blank" class="btn btn-transparent-dark-gray btn-rounded btn-small margin-20px-lr sm-margin-5px-top">Download now</a></div> --}}
                             </div>
                         </div>
@@ -35,8 +35,7 @@
                     <div class="row h-100">
                         <div class="col-12 d-flex justify-content-center flex-column text-center text-md-start">
                             <h1 class="alt-font text-extra-dark-gray font-weight-700 letter-spacing-minus-1 line-height-80 w-55 margin-35px-bottom lg-w-60 md-w-70 lg-line-height-auto sm-w-100 sm-margin-15px-bottom">{{$section->title}}</h1>
-                            <p class="text-extra-dark-gray text-large margin-four-bottom w-40 lg-w-50 md-w-60 sm-w-100 sm-margin-15px-bottom">{{$section->description}}</p>
-                            {{-- <div class="btn-dual"><a href="https://1.envato.market/g7jrr" target="_blank" class="btn btn-dark-gray btn-rounded btn-small no-margin-lr">Purchase Pofo</a><a href="https://1.envato.market/g7jrr" target="_blank" class="btn btn-transparent-dark-gray btn-rounded btn-small margin-20px-lr sm-margin-5px-tb">Download now</a></div> --}}
+                            <p class="text-extra-dark-gray text-large margin-four-bottom w-40 lg-w-50 md-w-60 sm-w-100 sm-margin-15px-bottom">{!! $section->description !!}</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +52,7 @@
                     <div class="row h-100">
                         <div class="col-12 d-flex justify-content-center flex-column text-center text-md-start">
                             <h1 class="alt-font text-extra-dark-gray font-weight-700 letter-spacing-minus-1 line-height-80 w-55 margin-35px-bottom lg-w-60 md-w-70 lg-line-height-auto sm-w-100 sm-margin-15px-bottom">{{$section->title}}</h1>
-                            <p class="text-extra-dark-gray text-large margin-four-bottom w-40 lg-w-50 md-w-60 sm-w-100 sm-margin-15px-bottom">{{$section->description}}</p>
+                            <p class="text-extra-dark-gray text-large margin-four-bottom w-40 lg-w-50 md-w-60 sm-w-100 sm-margin-15px-bottom">{!! $section->description !!}</p>
                             {{-- <div class="btn-dual"><a href="https://1.envato.market/g7jrr" target="_blank" class="btn btn-dark-gray btn-rounded btn-small no-margin-lr">Purchase Pofo</a><a href="https://1.envato.market/g7jrr" target="_blank" class="btn btn-transparent-dark-gray btn-rounded btn-small margin-20px-lr sm-margin-5px-tb">Download now</a></div> --}}
                         </div>
                     </div>
@@ -82,9 +81,7 @@
             <div class="col-12 col-lg-4 text-center md-margin-30px-bottom wow animate__fadeInLeft">
                 <?php $image = json_decode($section->cover); ?>
                 @if($image != null)
-                    @foreach($image as $index => $item)
-                            <div class="image"><img src="{{ asset('storage/' . $item) }}" alt="" style="min-height: 70vh;border-radius:10px; object-fit: cover;" width="100%"/></div>
-                    @endforeach
+                            <div class="image"><img src="<?= asset('storage/'.$image[0]) ?>" alt="" style="min-height: 70vh;border-radius:10px; object-fit: cover;" width="100%"/></div>
                 @else
                     <img src="https://via.placeholder.com/500x730" alt="" class="border-radius-6 w-100">
                 @endif

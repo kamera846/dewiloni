@@ -41,6 +41,10 @@
         <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/png">
         @endif
         @endforeach
+        {{-- <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/apple-touch-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/apple-touch-icon-114x114.png') }}"> --}}
+        <!-- style sheets and font icons  -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootsnav.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/font-icons.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/theme-vendors.min.css') }}">
